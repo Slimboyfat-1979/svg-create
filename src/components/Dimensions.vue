@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4 p-4 bg-gray-900 rounded-lg">
     <div class="form-control flex flex-col">
-      <label class="mb-1 text-sm font-medium text-white">Height</label>
+      <label class="mb-1 text-sm font-medium text-white text-center">Height</label>
       <input
         v-model="height"
         type="number"
@@ -9,7 +9,7 @@
       />
     </div>
     <div class="form-control flex flex-col">
-      <label class="mb-1 text-sm font-medium text-white">Width</label>
+      <label class="mb-1 text-sm font-medium text-white text-center">Width</label>
       <input
         v-model="width"
         type="number"

@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col gap-4 p-4 bg-gray-900 rounded-lg">
     <div class="form-control flex flex-col">
+        <label class="text-center mb-4" for="">Color</label>
       <ColorPicker style="width: 150px" v-on:input="getColor" :color></ColorPicker>
     </div>
   </div>
