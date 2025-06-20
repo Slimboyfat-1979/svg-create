@@ -1,56 +1,26 @@
 <template>
   <div class="flex h-screen">
-    <aside
-      class="w-150 bg-gray-800 text-white flex flex-row items-start justify-center space-x-4 py-4"
-    >
-      <Dimensions @update="handleUpdate"></Dimensions>
-      <Color @updateColor="changeColor"></Color>
-      <Transform @transform="changeRotation"></Transform>
-      <Stroke @isChecked="addStroke"></Stroke>
-    </aside>
-    <main class="flex-1 bg-white p-4 overflow-auto">
-      <Svg
-        :height="width"
-        :width="width"
-        :color="color"
-        :rotation="rotation"
-        :stroke="stroke"
-      ></Svg>
-    </main>
+   <section class="h-screen bg-base-200 w-1/4 shadow-2xl z-1 flex justify-center py-5">
+        <SvgOptions></SvgOptions>
+   </section>
+   <section class="h-screen bg-base-100 w-3/4 z-0 flex justify-center items-center">
+       <SvgRender></SvgRender>
+   </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import Dimensions from "@/components/Dimensions.vue";
-import Color from "@/components/Color.vue";
-import Transform from "@/components/Transform.vue";
-import Stroke from "@/components/Stroke.vue";
-import Svg from "@/components/Svg.vue";
+import { onMounted } from 'vue';
+import { svgStore } from './stores/store';
+import SvgOptions from './components/SvgOptions.vue';
+import SvgRender from './components/SvgRender.vue';
 
-const height = ref(250);
-const width = ref(250);
-const color = ref();
-const rotation = ref();
-const stroke = ref();
 
-function handleUpdate(values) {
-  height.value = values.height;
-  width.value = values.width;
-}
 
-function changeColor(newColor) {
-  color.value = newColor;
-}
-
-function changeRotation(rotationVal) {
-  console.log(rotationVal);
-  rotation.value = rotationVal;
-}
-
-function addStroke(checkedType) {
-  stroke.value = checkedType;
-}
+onMounted(() => {
+ 
+   
+})
 </script>
 
 <style scoped></style>
