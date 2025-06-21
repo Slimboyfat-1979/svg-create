@@ -22,7 +22,6 @@
 import { ref } from "vue";
 import { svgStore } from "@/stores/store.js";
 
-
 const svgType = svgStore();
 
 // const svgType = svgStore();
@@ -35,7 +34,7 @@ const readType = function(type) {
 const types = ref([
   "Rectangle",
   "Circle",
-  "Elipse",
+  "Ellipse",
   "Line",
   "Polygon",
   "Polyline",

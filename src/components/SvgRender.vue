@@ -19,6 +19,13 @@
       stroke="black" 
       stroke-width="2"
     ></circle>
+    <ellipse v-if="svgType.svgType === 'Ellipse'"
+    rx="100"
+    ry="30"
+    cx="100"
+    cy="100"
+    fill="green"
+    ></ellipse>
   </svg>
 </template>
 

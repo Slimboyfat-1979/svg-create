@@ -7,6 +7,7 @@ export const svgStore = defineStore('svgTypes', {
     actions: {
         changeType(type) {
             this.svgType = type; 
-        }
+        },
+        
     }
 })

@@ -11,7 +11,7 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { svgStore } from './stores/store';
+
 import SvgOptions from './components/SvgOptions.vue';
 import SvgRender from './components/SvgRender.vue';
 
