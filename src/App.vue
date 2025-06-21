@@ -15,12 +15,6 @@ import { onMounted } from 'vue';
 import SvgOptions from './components/SvgOptions.vue';
 import SvgRender from './components/SvgRender.vue';
 
-
-
-onMounted(() => {
- 
-   
-})
 </script>
 
 <style scoped></style>

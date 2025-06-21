@@ -13,20 +13,31 @@
         />
       </div>
     </div>
+    <component :is="currentComponent" />
   </div>
 </template>
 
 <style scoped></style>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed, defineProps } from "vue";
 import { svgStore } from "@/stores/store.js";
+import RectangleOptions from '@/ui/RectangleOptions.vue'
+import CircleOptions from "@/ui/CircleOptions.vue";
+import EllipseOptions from "@/ui/EllipseOptions.vue";
 
 const svgType = svgStore();
 
-// const svgType = svgStore();
+const componentMap = {
+    Rectangle: RectangleOptions,
+    Circle: CircleOptions,
+    Ellipse: EllipseOptions
+}
 
-//determine what type of SVG to render
+const currentComponent = computed(() => {
+    return componentMap[svgType.svgType];
+})
+
 const readType = function(type) {
     svgType.changeType(type);
 }

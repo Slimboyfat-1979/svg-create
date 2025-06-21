@@ -1,17 +1,19 @@
 <template>
-  <svg height="250" width="250" viewbox="0 0 100 100">
+  <svg height="600" width="600" viewbox="0 0 100 100" style="border: 2px solid red">
     <rect 
-      v-if="svgType.svgType==='Rectangle'" 
-      x="0" 
-      y="0" 
-      width="100%" 
-      height="100%" 
+      v-if="store.svgType==='Rectangle'" 
+      :x="store.rectAttributes.x" 
+      :y="store.rectAttributes.y" 
+      :width="store.rectAttributes.width" 
+      :height="store.rectAttributes.height" 
+      :rx="store.rectAttributes.rx"
+      :ry="store.rectAttributes.ry"
       fill="blue"
       stroke="black"
       stroke-width="2"
     ></rect>
     <circle 
-      v-if="svgType.svgType==='Circle'" 
+      v-if="store.svgType==='Circle'" 
       cx="50%" 
       cy="50%" 
       r="100" 
@@ -19,7 +21,7 @@
       stroke="black" 
       stroke-width="2"
     ></circle>
-    <ellipse v-if="svgType.svgType === 'Ellipse'"
+    <ellipse v-if="store.svgType === 'Ellipse'"
     rx="100"
     ry="30"
     cx="100"
@@ -31,6 +33,6 @@
 
 <script setup>
 import { svgStore } from '@/stores/store';
+const store = svgStore();
 
-const svgType = svgStore();
 </script>
