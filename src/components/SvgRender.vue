@@ -28,11 +28,18 @@
     cy="100"
     fill="green"
     ></ellipse>
+    <polyline v-if="store.svgType === 'Polyline'"
+    :points="store.polylineAttributes.polylinePoints" stroke="black" stroke-width="2"
+    ></polyline>
   </svg>
 </template>
 
 <script setup>
 import { svgStore } from '@/stores/store';
 const store = svgStore();
+
+const pairPoints = function(){
+   
+}
 
 </script>

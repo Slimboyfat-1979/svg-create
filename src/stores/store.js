@@ -10,6 +10,11 @@ export const svgStore = defineStore('svgTypes', {
             height: 100,
             rx: 0,
             ry: 0
+        },
+        polylineAttributes: {
+            polylinePoints: [50,50,100,50],
+            stroke: "Black",
+            strokeWidth: 2
         }
     }),
     actions: {

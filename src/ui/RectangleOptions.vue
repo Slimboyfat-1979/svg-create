@@ -1,6 +1,6 @@
 <template>
     <div class="container flex flex-col px-5 py-5 bg-base-300 h-full">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center ">
             <div class="form-control flex flex-row items-center justify-center mb-2 w-80">
                 <label class="mr-2 w-32 text-right">Height</label>
                 <input v-model="rectAttributes.height" class="w-24 rounded px-2 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-neutral" type="number">
