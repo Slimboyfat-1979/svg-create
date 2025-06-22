@@ -12,7 +12,7 @@ export const svgStore = defineStore('svgTypes', {
             ry: 0
         },
         polylineAttributes: {
-            polylinePoints: [50,50,100,50],
+            polylinePoints: [],
             stroke: "Black",
             strokeWidth: 2
         }
@@ -20,6 +20,10 @@ export const svgStore = defineStore('svgTypes', {
     actions: {
         changeType(type) {
             this.svgType = type; 
+        },
+        addPoints(points) {
+            this.polylineAttributes.polylinePoints.push(...points);
+            console.log("Added")
         }
     }
 })

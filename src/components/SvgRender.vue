@@ -29,17 +29,20 @@
     fill="green"
     ></ellipse>
     <polyline v-if="store.svgType === 'Polyline'"
-    :points="store.polylineAttributes.polylinePoints" stroke="black" stroke-width="2"
+    :points="polylinePoints" stroke="black" stroke-width="2"
     ></polyline>
   </svg>
 </template>
 
 <script setup>
 import { svgStore } from '@/stores/store';
+import { computed } from 'vue';
 const store = svgStore();
 
-const pairPoints = function(){
-   
-}
+const polylinePoints = computed(() => {
+    // store.polylineAttributes.polylinePoints.map(p => p.join(',')).join(' ')
+  
+})
+
 
 </script>
