@@ -10,7 +10,9 @@
     rows="4"
     cols="40"
   ></textarea>
-  <p>{{ store.polylineAttributes.polylinePoints }}</p>
+  <p></p>
+  <!-- <p>{{ store.polylineAttributes.polylinePoints }}</p> -->
+   <p>{{ points }}</p>
 </template>
 
 <script setup>
@@ -18,22 +20,23 @@ import { svgStore } from "@/stores/store";
 import { ref } from "vue";
 
 const store = svgStore();
-
+const points = ref([]);
+let processedPairs = new Set();
 
 const addpoints = function (input) {
   if (input.endsWith(" ")) {
-    const trimmed = input.trim();
-    const pointStrings = trimmed.split(" "); // ["10,20", "20,20"]
+    const entries = input.trim().split(" ");
 
-    const newPoints = pointStrings
-      .map((pair) => {
-        const [x, y] = pair.split(",").map(Number);
-        return [x, y];
-      })
-      .filter((pair) => pair.length === 2 && pair.every((n) => !isNaN(n)));
-      //need to figure out how to add my arrays to the store 
-      //then read from the store with svg render
-      console.log(newPoints)
+    for (const pair of entries) {
+      if (!processedPairs.has(pair)) {
+        const clean = pair.split(",");
+        if (clean.length === 2) {
+          points.value.push([clean[0], clean[1]]);
+          processedPairs.add(pair); // Mark as handled
+        }
+      }
+    }
   }
 };
+
 </script>
