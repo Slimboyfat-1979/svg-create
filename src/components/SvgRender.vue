@@ -29,7 +29,7 @@
     fill="green"
     ></ellipse>
     <polyline v-if="store.svgType === 'Polyline'"
-    :points="polylinePoints" stroke="black" stroke-width="2"
+    :points="polylinePoints" stroke="red" stroke-width="2" fill="none"
     ></polyline>
   </svg>
 </template>
