@@ -40,8 +40,7 @@ import { computed } from 'vue';
 const store = svgStore();
 
 const polylinePoints = computed(() => {
-    // store.polylineAttributes.polylinePoints.map(p => p.join(',')).join(' ')
-  
+    return store.polylineAttributes.polylinePoints;
 })
 
 
