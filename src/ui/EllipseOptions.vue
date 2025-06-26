@@ -1,3 +1,9 @@
 <template>
-    <h1>These are the ellipse options</h1>
+    <OptionsUi>
+        
+    </OptionsUi>
 </template>
+
+<script setup>
+import OptionsUi from '@/components/OptionsUi.vue';
+</script>

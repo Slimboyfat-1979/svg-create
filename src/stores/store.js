@@ -4,10 +4,10 @@ export const svgStore = defineStore("svgTypes", {
   state: () => ({
     svgType: "",
     rectAttributes: {
-      x: 100,
-      y: 100,
-      width: 100,
-      height: 100,
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0,
       rx: 0,
       ry: 0,
     },
@@ -16,6 +16,11 @@ export const svgStore = defineStore("svgTypes", {
       stroke: "Black",
       strokeWidth: 2,
     },
+    circleAttributes: {
+        cx: 0,
+        cy: 0,
+        r: 0
+    }
   }),
   actions: {
     changeType(type) {

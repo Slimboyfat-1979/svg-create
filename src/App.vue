@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen">
-   <section class="h-screen bg-base-200 w-1/4 shadow-2xl z-1 flex justify-center py-5">
+   <section class="h-screen bg-base-200 w-1/4 shadow-2xl z-1 flex justify-center">
         <SvgOptions></SvgOptions>
    </section>
    <section class="h-screen bg-base-100 w-3/4 z-0 flex justify-center items-center">

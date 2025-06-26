@@ -26,7 +26,7 @@ const store = svgStore();
 const points = ref("");
 
 const createPoints = function () {
-  const pointNumber = 50;
+  const pointNumber = 100;
   const points = [];
   for (let i = 0; i <= pointNumber; i++) {
     let pointOne = Math.floor(Math.random() * 500);
