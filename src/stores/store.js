@@ -4,6 +4,7 @@ export const svgStore = defineStore("svgTypes", {
   state: () => ({
     svgType: "",
     rectAttributes: {
+      aspectRationLock: false,  
       x: 0,
       y: 0,
       width: 0,
