@@ -32,7 +32,7 @@ import RectangleOptions from "@/ui/RectangleOptions.vue";
 import CircleOptions from "@/ui/CircleOptions.vue";
 import EllipseOptions from "@/ui/EllipseOptions.vue";
 import PolylineOptions from "@/ui/PolylineOptions.vue";
-import OptionsUi from "./OptionsUi.vue";
+import LineOptions from "./LineOptions.vue";
 
 const svgType = svgStore();
 
@@ -41,6 +41,7 @@ const componentMap = {
   Circle: CircleOptions,
   Ellipse: EllipseOptions,
   Polyline: PolylineOptions,
+  Line: LineOptions
 };
 
 const currentComponent = computed(() => {

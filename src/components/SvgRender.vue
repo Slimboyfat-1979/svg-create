@@ -42,10 +42,10 @@
         ></polyline>
         <line
           v-if="store.svgType === 'Line'"
-          x1="10"
-          y1="10"
-          x2="50"
-          y2="10"
+          :x1="line.x1"
+          :y1="line.y1"
+          :x2="line.x2"
+          :y2="line.y2"
           stroke="black"
           stroke-width="2"
         ></line>
@@ -75,4 +75,8 @@ const ellipse = computed(() => {
 const rectangle = computed(() => {
   return store.rectAttributes;
 });
+
+const line = computed(() => {
+    return store.lineAttributes;
+})
 </script>

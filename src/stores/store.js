@@ -27,6 +27,12 @@ export const svgStore = defineStore("svgTypes", {
         ry: 0,
         cx: 0,
         cy: 0
+    },
+    lineAttributes: {
+        x1: 0,
+        y1: 0,
+        x2: 0,
+        y2: 0
     }
   }),
   actions: {
