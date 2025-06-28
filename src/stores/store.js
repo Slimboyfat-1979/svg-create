@@ -21,6 +21,12 @@ export const svgStore = defineStore("svgTypes", {
         cx: 0,
         cy: 0,
         r: 0
+    },
+    ellipseAttributes: {
+        rx: 0,
+        ry: 0,
+        cx: 0,
+        cy: 0
     }
   }),
   actions: {
