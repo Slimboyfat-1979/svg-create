@@ -37,7 +37,7 @@
           v-if="store.svgType === 'Polyline'"
           :points="polylinePoints"
           stroke="red"
-          stroke-width="2"
+          stroke-width="0.1"
           fill="none"
         ></polyline>
         <line
@@ -47,8 +47,12 @@
           :x2="line.x2"
           :y2="line.y2"
           stroke="black"
-          stroke-width="2"
+          stroke-width="0.25"
         ></line>
+        <polygon v-if="store.svgType === 'Polygon'"
+            :points="polygonPoints"
+            fill="purple"
+        ></polygon>
       </svg>
     </div>
   </div>
@@ -78,5 +82,9 @@ const rectangle = computed(() => {
 
 const line = computed(() => {
     return store.lineAttributes;
+})
+
+const polygonPoints = computed(() => {
+    return store.polygonAttributes.polygonPoints;
 })
 </script>

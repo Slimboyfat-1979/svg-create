@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full bg-amber-500 text-4xl text">
+  <div class="w-full h-full bg-gradient-to-b from-purple-100 to-red-100 text-4xl text">
     <div class="p-5 text-center">
       <h2>SVG TYPE</h2>
       <div class="border-1 border-black-500 mt-2">
@@ -26,13 +26,14 @@
 <style scoped></style>
 
 <script setup>
-import { ref, computed, defineProps } from "vue";
+import { ref, computed} from "vue";
 import { svgStore } from "@/stores/store.js";
 import RectangleOptions from "@/ui/RectangleOptions.vue";
 import CircleOptions from "@/ui/CircleOptions.vue";
 import EllipseOptions from "@/ui/EllipseOptions.vue";
 import PolylineOptions from "@/ui/PolylineOptions.vue";
-import LineOptions from "./LineOptions.vue";
+import LineOptions from "@/ui/LineOptions.vue";
+import PolygonOptions from "@/ui/PolygonOptions.vue";
 
 const svgType = svgStore();
 
@@ -41,7 +42,8 @@ const componentMap = {
   Circle: CircleOptions,
   Ellipse: EllipseOptions,
   Polyline: PolylineOptions,
-  Line: LineOptions
+  Line: LineOptions,
+  Polygon: PolygonOptions
 };
 
 const currentComponent = computed(() => {
@@ -49,7 +51,6 @@ const currentComponent = computed(() => {
 });
 
 const readType = function (type) {
-  console.log(type)
   svgType.changeType(type);
 };
 

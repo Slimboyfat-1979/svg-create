@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import OptionsUi from "./OptionsUi.vue";
+import OptionsUi from "../components/OptionsUi.vue";
 import { reactive, watch } from "vue";
 import { svgStore } from "@/stores/store";
 
