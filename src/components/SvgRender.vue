@@ -16,7 +16,7 @@
           :height="rectangle.height"
           :rx="rectangle.rx"
           :ry="rectangle.ry"
-          fill="blue"
+          :fill="store.fill""
         ></rect>
         <circle
           v-if="store.svgType === 'Circle'"

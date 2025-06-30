@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 export const svgStore = defineStore("svgTypes", {
   state: () => ({
     svgType: "",
+    fill: "",
     rectAttributes: {
       aspectRationLock: false,
       x: 0,
@@ -48,7 +49,6 @@ export const svgStore = defineStore("svgTypes", {
     addPolygonPoints(input) {
         this.polygonAttributes.polygonPoints = [input.trimEnd()];
         console.log(this.polygonAttributes.polygonPoints);
-        // this.polygonAttributes.polygonPoints = [input.trimEnd()];
     }
-  },
+  }
 });
